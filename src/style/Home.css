@@ -1,0 +1,51 @@
+.container {
+  width: 375px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(224, 0, 115);
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 45px;
+}
+
+.mobile-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgb(237, 0, 131);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-city-form {
+  width: 50%;
+}
+
+.filter-select {
+  width: 50%;
+}
+
+.city-list {
+  height: 300px;
+  overflow-y: auto;
+  background-color: rgb(29, 29, 29);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
