@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import '../style/CityList.css';
 
 const CityList = ({ cities }) => (
-  <ul>
+  <div className="city-list-container">
     {cities.map((city) => (
-      <li key={city.id}>
-        <Link to={`/details/${city.id}`}>{city.name}</Link>
-        <p>
-          Temperature:
+      <div key={city.id} className="city-box">
+        <Link to={`/details/${city.id}`} className="city-link">
+          {city.name}
+        </Link>
+        <p className="city-temperature">
+          {' '}
           {city.main.temp}
           °C
         </p>
-      </li>
+      </div>
     ))}
-  </ul>
+  </div>
 );
 
 CityList.propTypes = {
