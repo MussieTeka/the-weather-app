@@ -1,9 +1,11 @@
+/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import AddCity from './AddCity';
 import CityList from './CityList';
 import Filter from './Filter';
+import '../style/Home.css';
 
 const API_KEY = 'f4dcc1ff0c9c9801258e79bae8709b84';
 
@@ -45,11 +47,21 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div className="container">
       <h1>Weather App</h1>
-      <AddCity onCityAdded={handleCityAdded} />
-      <Filter value={filter} onChange={handleFilterChange} />
-      <CityList cities={filteredCities} />
+      <div className="mobile-layout">
+        <div className="top-row">
+          <div className="box">
+            <AddCity onCityAdded={handleCityAdded} className="add-city-form" />
+          </div>
+          <div className="box">
+            <Filter value={filter} onChange={handleFilterChange} className="filter-select" />
+          </div>
+        </div>
+        <div className="box">
+          <CityList cities={filteredCities} className="city-list" />
+        </div>
+      </div>
     </div>
   );
 };

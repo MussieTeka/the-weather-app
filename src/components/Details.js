@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import '../style/Details.css';
 
 const API_KEY = 'f4dcc1ff0c9c9801258e79bae8709b84';
 
@@ -24,58 +25,64 @@ const Details = () => {
   }, [id]);
 
   return (
-    <div>
-      <h2>{city ? city.name : 'Loading...'}</h2>
+    <div className="details-container">
+      <h2 className="details-header">{city ? city.name : 'Loading...'}</h2>
       {city && (
-        <div>
-          <Link to="/">Back</Link>
-          <p>
-            Temperature:
-            {' '}
+      <div className="details-box">
+        <Link to="/" className="details-back-link">Back</Link>
+        <p className="details-item">
+          <span className="details-item-name">Temperature</span>
+          <span className="details-item-value">
             {city.main.temp}
             °C
-          </p>
-          <p>
-            Humidity:
-            {' '}
+          </span>
+        </p>
+        <p className="details-item">
+          <span className="details-item-name">Humidity</span>
+          <span className="details-item-value">
             {city.main.humidity}
             %
-          </p>
-          <p>
-            Description:
-            {' '}
-            {city.weather[0].description}
-          </p>
-          <p>
-            Wind Speed:
-            {' '}
+          </span>
+        </p>
+        <p className="details-item">
+          <span className="details-item-name">Description</span>
+          <span className="details-item-value">{city.weather[0].description}</span>
+        </p>
+        <p className="details-item">
+          <span className="details-item-name">Wind Speed</span>
+          <span className="details-item-value">
             {city.wind.speed}
             {' '}
             m/s
-          </p>
-          <p>
-            Pressure:
-            {' '}
+          </span>
+        </p>
+        <p className="details-item">
+          <span className="details-item-name">Pressure</span>
+          <span className="details-item-value">
             {city.main.pressure}
             {' '}
             hPa
-          </p>
-          <p>
-            Visibility:
-            {' '}
+          </span>
+        </p>
+        <p className="details-item">
+          <span className="details-item-name">Visibility</span>
+          <span className="details-item-value">
             {city.visibility}
             {' '}
             meters
-          </p>
-          <p>
-            Cloudiness:
-            {' '}
+          </span>
+        </p>
+        <p className="details-item">
+          <span className="details-item-name">Cloudiness</span>
+          <span className="details-item-value">
             {city.clouds.all}
             %
-          </p>
-        </div>
+          </span>
+        </p>
+      </div>
       )}
     </div>
+
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import '../style/AddCity.css';
 
 const API_KEY = 'f4dcc1ff0c9c9801258e79bae8709b84';
 
@@ -24,15 +25,15 @@ const AddCity = ({ onCityAdded }) => {
   };
 
   return (
-    <div>
-      <h2>Add City</h2>
+    <div className="add-city-container">
       <input
+        className="add-city-input"
         type="text"
         placeholder="Enter city name"
         value={cityName}
         onChange={handleCityNameChange}
       />
-      <button type="button" onClick={handleAddCity}>Add</button>
+      <button className="add-city-button" type="button" onClick={handleAddCity}>Add</button>
     </div>
   );
 };
