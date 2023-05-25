@@ -1,7 +1,5 @@
-/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
 import AddCity from './AddCity';
 import CityList from './CityList';
 import Filter from './Filter';
@@ -18,10 +16,11 @@ const Home = () => {
     const fetchWeatherData = async () => {
       try {
         const cityIds = [524901, 703448, 1283240, 2643743, 3169070, 1835848, 1701668, 745044];
-        const response = await axios.get(
+        const response = await fetch(
           `http://api.openweathermap.org/data/2.5/group?id=${cityIds.join(',')}&units=metric&appid=${API_KEY}`,
         );
-        dispatch({ type: 'SET_CITIES', payload: response.data.list });
+        const data = await response.json();
+        dispatch({ type: 'SET_CITIES', payload: data.list });
       } catch (error) {
         throw new Error('Error fetching weather data:', error);
       }

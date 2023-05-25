@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import '../style/AddCity.css';
 
 const API_KEY = 'f4dcc1ff0c9c9801258e79bae8709b84';
@@ -14,11 +13,17 @@ const AddCity = ({ onCityAdded }) => {
 
   const handleAddCity = async () => {
     try {
-      const response = await axios.get(
+      const response = await fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`,
       );
-      onCityAdded(response.data);
-      setCityName('');
+
+      if (response.ok) {
+        const data = await response.json();
+        onCityAdded(data);
+        setCityName('');
+      } else {
+        throw new Error('Error adding city:', response.statusText);
+      }
     } catch (error) {
       throw new Error('Error adding city:', error);
     }
@@ -33,7 +38,9 @@ const AddCity = ({ onCityAdded }) => {
         value={cityName}
         onChange={handleCityNameChange}
       />
-      <button className="add-city-button" type="button" onClick={handleAddCity}>Add</button>
+      <button className="add-city-button" type="button" onClick={handleAddCity}>
+        Add
+      </button>
     </div>
   );
 };
