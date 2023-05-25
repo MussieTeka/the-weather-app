@@ -1,11 +1,9 @@
 import { createStore } from 'redux';
 
-// Define the initial state
 const initialState = {
   cities: [],
 };
 
-// Define the reducer function
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_CITY':
@@ -23,7 +21,6 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-// Create the Redux store
 const store = createStore(reducer);
 
 export default store;
