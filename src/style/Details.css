@@ -1,6 +1,6 @@
 .details-container {
   width: 375px;
-  height: 100vh;
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
