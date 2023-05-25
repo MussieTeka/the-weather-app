@@ -12,6 +12,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Live Demo ](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -57,6 +58,12 @@ The following features are implemented in the Weather App:
 - Add new cities to the app
 - View detailed weather information for individual cities
 - Responsive design for mobile and desktop devices
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a id="live-demo"></a>
+
+- Click [here](https://the-weather-app-kakb.onrender.com/) to view the live Demo. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
