@@ -18,7 +18,7 @@ const Home = () => {
       try {
         const cityIds = [524901, 703448, 1283240, 2643743, 3169070, 1835848, 1701668, 745044];
         const response = await fetch(
-          `http://api.openweathermap.org/data/2.5/group?id=${cityIds.join(',')}&units=metric&appid=${API_KEY}`,
+          `https://api.openweathermap.org/data/2.5/group?id=${cityIds.join(',')}&units=metric&appid=${API_KEY}`,
         );
 
         if (!response.ok) {
