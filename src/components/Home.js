@@ -11,6 +11,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const cities = useSelector((state) => state.cities);
   const [filter, setFilter] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -19,10 +20,15 @@ const Home = () => {
         const response = await fetch(
           `http://api.openweathermap.org/data/2.5/group?id=${cityIds.join(',')}&units=metric&appid=${API_KEY}`,
         );
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch weather data');
+        }
+
         const data = await response.json();
         dispatch({ type: 'SET_CITIES', payload: data.list });
       } catch (error) {
-        throw new Error('Error fetching weather data:', error);
+        setError('Error fetching weather data');
       }
     };
 
@@ -48,6 +54,7 @@ const Home = () => {
   return (
     <div className="container">
       <h1>Weather App</h1>
+      {error && <div className="error-message">{error}</div>}
       <div className="mobile-layout">
         <div className="top-row">
           <div className="box">
