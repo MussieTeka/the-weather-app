@@ -119,17 +119,6 @@ const Details = () => {
               {new Date(city.sys.sunset * 1000).toLocaleTimeString()}
             </span>
           </p>
-          <p className="details-item">
-            <span className="details-item-name">Geo Coordinates</span>
-            <span className="details-item-value">
-              Lat:
-              {' '}
-              {city.coord.lat}
-              , Lon:
-              {' '}
-              {city.coord.lon}
-            </span>
-          </p>
         </div>
       )}
     </div>
