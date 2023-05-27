@@ -7,19 +7,19 @@ import right from '../images/right.png';
 const CityList = ({ cities, getWeatherImage }) => (
   <div className="city-list-container">
     {cities.map((city) => (
-      <div key={city.id} className="city-box">
+      <Link to={`/details/${city.id}`} key={city.id} className="city-box">
         <div className="city-top">
           <img src={getWeatherImage(city.main.temp)} alt="Weather" className="weather-image" />
           <img src={right} alt="Right Arrow" className="right-arrow" />
         </div>
-        <Link to={`/details/${city.id}`} className="city-link">
+        <p className="city-link">
           {city.name}
-        </Link>
+        </p>
         <p className="city-temperature">
           {city.main.temp}
           °C
         </p>
-      </div>
+      </Link>
     ))}
   </div>
 );
