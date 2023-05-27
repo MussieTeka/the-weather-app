@@ -37,8 +37,8 @@
 .city-link {
   text-decoration: none;
   color: white;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 18px;
   line-height: 24px;
   align-self: flex-end;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
 }
 
 .city-temperature {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 20px;
   color: white;
   align-self: flex-end;
