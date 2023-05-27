@@ -63,7 +63,7 @@ The following features are implemented in the Weather App:
 
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-- Click [here](https://the-weather-app-kakb.onrender.com/) to view the live Demo. 
+- Click [here](https://the-weather-app-liv3.onrender.com/) to view the live Demo. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
