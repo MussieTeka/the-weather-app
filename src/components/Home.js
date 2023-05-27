@@ -22,7 +22,7 @@ const Home = () => {
         const cityIds = [3421319, 5880054, 2122311, 6185377, 2643743,
           1850147, 6173331, 5391959, 292223, 360630, 1609350, 2147714];
         const response = await fetch(
-          `http://api.openweathermap.org/data/2.5/group?id=${cityIds.join(',')}&units=metric&appid=${API_KEY}`,
+          `https://api.openweathermap.org/data/2.5/group?id=${cityIds.join(',')}&units=metric&appid=${API_KEY}`,
         );
         const data = await response.json();
         dispatch({ type: 'SET_CITIES', payload: data.list });
