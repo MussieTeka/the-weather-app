@@ -175,6 +175,7 @@ If you like this project, please give it a star on GitHub.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) - a creator of the web design I used for this porject.
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
 - [GitHub](https://github.com/)
