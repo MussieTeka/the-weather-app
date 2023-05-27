@@ -1,0 +1,75 @@
+.city-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.city-box {
+  position: relative;
+  flex-basis: 50%;
+  height: 160px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.city-box:nth-child(4n-3) {
+  background-color: rgb(201, 80, 127);
+  color: white;
+}
+
+.city-box:nth-child(4n-2) {
+  background-color: rgb(193, 76, 118);
+  color: white;
+}
+
+.city-box:nth-child(4n-1) {
+  background-color: rgb(193, 76, 118);
+  color: white;
+}
+
+.city-box:nth-child(4n) {
+  background-color: rgb(201, 80, 127);
+  color: white;
+}
+
+.city-link {
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  align-self: flex-end;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.city-temperature {
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  align-self: flex-end;
+}
+
+.city-top {
+  align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.weather-image {
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+.right-arrow {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 10px;
+  top: 10px;
+}
