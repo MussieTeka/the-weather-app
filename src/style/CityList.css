@@ -37,8 +37,8 @@
 .city-link {
   text-decoration: none;
   color: white;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 18px;
   line-height: 24px;
   align-self: flex-end;
   text-transform: uppercase;
@@ -46,10 +46,17 @@
 }
 
 .city-temperature {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 20px;
   color: white;
   align-self: flex-end;
+}
+
+.city-top {
+  align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .weather-image {
@@ -57,4 +64,12 @@
   height: 50px;
   align-self: flex-start;
   margin-bottom: 5px;
+}
+
+.right-arrow {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 10px;
+  top: 10px;
 }
