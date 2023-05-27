@@ -6,12 +6,13 @@
 .city-box {
   position: relative;
   flex-basis: 50%;
-  height: 140px;
+  height: 160px;
   padding: 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-decoration: none;
 }
 
 .city-box:nth-child(4n-3) {
@@ -35,7 +36,6 @@
 }
 
 .city-link {
-  text-decoration: none;
   color: white;
   font-weight: 800;
   font-size: 18px;
