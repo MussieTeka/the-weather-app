@@ -1,43 +1,60 @@
 .city-list-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 
 .city-box {
-  width: 50%;
+  position: relative;
+  flex-basis: 50%;
   height: 140px;
   padding: 15px;
   box-sizing: border-box;
-  background-color: rgb(224, 0, 115);
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.city-box:hover {
-  transform: translateY(-5px);
+.city-box:nth-child(4n-3) {
+  background-color: rgb(201, 80, 127);
+  color: white;
+}
+
+.city-box:nth-child(4n-2) {
+  background-color: rgb(193, 76, 118);
+  color: white;
+}
+
+.city-box:nth-child(4n-1) {
+  background-color: rgb(193, 76, 118);
+  color: white;
+}
+
+.city-box:nth-child(4n) {
+  background-color: rgb(201, 80, 127);
+  color: white;
 }
 
 .city-link {
   text-decoration: none;
   color: white;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
-  transition: color 0.3s ease-in-out;
-  margin-bottom: 10px;
-}
-
-.city-link:hover {
-  color: #555;
+  align-self: flex-end;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .city-temperature {
-  margin-top: 10px;
   font-size: 17px;
   line-height: 20px;
   color: white;
+  align-self: flex-end;
+}
+
+.weather-image {
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-bottom: 5px;
 }

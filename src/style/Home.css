@@ -1,16 +1,19 @@
 .container {
   width: 375px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: rgb(224, 0, 115);
+  padding-top: 1px;
+  background-color: rgb(218, 88, 137);
   color: #fff;
 }
 
-h1 {
+.title-container {
+  height: 30px;
+}
+
+.title {
   text-align: center;
-  margin-bottom: 30px;
-  font-weight: 800;
-  font-size: 45px;
+  font-size: 14px;
+  padding-bottom: 1px;
 }
 
 .mobile-layout {
@@ -27,12 +30,9 @@ h1 {
 
 .box {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: rgb(237, 0, 131);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(234, 94, 146);
+  margin: 0;
 }
 
 .add-city-form {
@@ -43,9 +43,31 @@ h1 {
   width: 50%;
 }
 
+.city-title {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.city-text {
+  margin: 0;
+  padding: 0 0 10px 10px;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .city-list {
   height: 300px;
   overflow-y: auto;
   background-color: rgb(29, 29, 29);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.city-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

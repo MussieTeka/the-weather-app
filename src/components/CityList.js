@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../style/CityList.css';
 
-const CityList = ({ cities }) => (
+const CityList = ({ cities, getWeatherImage }) => (
   <div className="city-list-container">
     {cities.map((city) => (
       <div key={city.id} className="city-box">
+        <img src={getWeatherImage(city.main.temp)} alt="Weather" className="weather-image" />
         <Link to={`/details/${city.id}`} className="city-link">
           {city.name}
         </Link>
         <p className="city-temperature">
-          {' '}
           {city.main.temp}
           °C
         </p>
@@ -30,6 +30,7 @@ CityList.propTypes = {
       }).isRequired,
     }),
   ).isRequired,
+  getWeatherImage: PropTypes.func.isRequired,
 };
 
 export default CityList;
